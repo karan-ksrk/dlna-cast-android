@@ -89,7 +89,7 @@ class CastService : Service() {
         instance = this
         getSystemService(NotificationManager::class.java).createNotificationChannel(
             NotificationChannel(CHANNEL_ID, "Casting", NotificationManager.IMPORTANCE_LOW).apply {
-                description = "Shown while dlna-cast is casting to a renderer"
+                description = "Shown while dlnacast is casting to a renderer"
             },
         )
     }

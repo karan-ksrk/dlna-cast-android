@@ -169,7 +169,7 @@ class _NoAccess extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            'dlna-cast needs access to your media to cast it.',
+            'dlnacast needs access to your media to cast it.',
             textAlign: TextAlign.center,
             style: TextStyle(color: Palette.inkDim),
           ),

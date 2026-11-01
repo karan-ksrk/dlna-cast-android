@@ -29,8 +29,9 @@ protocol layer this repo ports.
   launch animation with synthesised sound, branded home screen. Next: Play Store release.
 - Debug on device with: `adb logcat -s ScreenStreamer LiveServer CastService VideoConverter flutter` plus the in-app
   Activity log (file-cast errors only show there; request lines go to the `flutter` tag).
-- Git: initialised on `main`; the initial commit and GitHub remote are not done yet (the `gh` CLI isn't installed).
-  Commit only when asked.
+- Git: `main` is pushed to https://github.com/karan-ksrk/dlna-cast-android (public; CI in `.github/workflows`).
+  Commit as "Karan Singh <karanksrk2000@outlook.com>" (set in this repo's config). Commit only when asked. The `gh`
+  CLI isn't installed. The app ID is `io.github.karan_ksrk.dlna_cast` and must never change once it's on Play.
 - Known warning: `photo_manager` applies the Kotlin Gradle Plugin, which a future Flutter will reject. It works today.
 
 ## Layout

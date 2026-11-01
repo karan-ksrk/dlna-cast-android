@@ -22,7 +22,7 @@ class DlnaCastApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-    title: 'dlna-cast',
+    title: 'dlnacast',
     debugShowCheckedModeBanner: false,
     theme: buildTheme(),
     home: HomePage(controller: controller),
