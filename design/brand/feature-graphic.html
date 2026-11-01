@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- Play Store feature graphic (1024x500). Render with headless Chrome; chrome --headless --allow-file-access-from-files --window-size=1024,500 --screenshot. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: Unbounded; src: url("../../assets/fonts/Unbounded.ttf"); font-weight: 100 900; }
+  html, body { margin: 0; width: 1024px; height: 500px; overflow: hidden; }
+  body {
+    background:
+      radial-gradient(circle at 30% 50%, rgba(154, 140, 248, 0.30), rgba(154, 140, 248, 0) 46%),
+      linear-gradient(180deg, #2a2f36, #16191c);
+    font-family: Unbounded, sans-serif;
+    position: relative;
+  }
+  .mark { position: absolute; left: 92px; top: 110px; width: 280px; height: 280px; }
+  .copy { position: absolute; left: 408px; top: 168px; }
+  .name { font-size: 88px; font-weight: 700; letter-spacing: -2px; color: #ece8e1; line-height: 1; }
+  .name b { color: #f2a541; font-weight: 700; }
+  .tag { margin-top: 26px; font-size: 19px; font-weight: 500; letter-spacing: 5px; color: #aaa59c; }
+  .waves { position: absolute; right: -170px; top: -60px; opacity: 0.10; }
+</style>
+</head>
+<body>
+  <svg class="waves" width="620" height="620" viewBox="0 0 620 620" fill="none" stroke="#b8adff" stroke-width="34" stroke-linecap="round">
+    <path d="M190 205 A150 150 0 0 1 190 415"/><path d="M260 135 A250 250 0 0 1 260 485"/><path d="M330 65 A350 350 0 0 1 330 555"/>
+  </svg>
+  <svg class="mark" viewBox="94 130 322 252">
+    <defs>
+      <linearGradient id="amber" x1="102" y1="158" x2="266" y2="354" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC56D"/><stop offset="1" stop-color="#EC8429"/></linearGradient>
+      <linearGradient id="violet" x1="290" y1="150" x2="370" y2="362" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8ADFF"/><stop offset="1" stop-color="#7D6CF2"/></linearGradient>
+    </defs>
+    <path d="M120 176 L120 336 L248 256 Z" fill="url(#amber)" stroke="url(#amber)" stroke-width="36" stroke-linejoin="round"/>
+    <g fill="none" stroke="url(#violet)" stroke-width="26" stroke-linecap="round">
+      <path d="M291.84 212.16 A62 62 0 0 1 291.84 299.84"/>
+      <path d="M322.95 181.05 A106 106 0 0 1 322.95 330.95" stroke-opacity="0.72"/>
+      <path d="M354.07 149.93 A150 150 0 0 1 354.07 362.07" stroke-opacity="0.45"/>
+    </g>
+  </svg>
+  <div class="copy">
+    <div class="name">dlna<b>cast</b></div>
+    <div class="tag">CAST YOUR PHONE TO ANY SCREEN</div>
+  </div>
+</body>
+</html>
