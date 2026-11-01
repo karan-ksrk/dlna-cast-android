@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Beam icon background: the graphite tile with a violet glow behind the arcs (design/brand/beam.svg). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path android:pathData="M0,0h512v512h-512z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="0" android:endY="512"
+                android:startColor="#FF30363D" android:endColor="#FF16191C" />
+        </aapt:attr>
+    </path>
+    <path android:pathData="M0,0h512v512h-512z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="317" android:centerY="256" android:gradientRadius="256"
+                android:startColor="#529A8CF8" android:endColor="#009A8CF8" />
+        </aapt:attr>
+    </path>
+</vector>

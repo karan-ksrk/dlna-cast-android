@@ -1,0 +1,45 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      # The muxer test decodes its output with the real ffmpeg; without it that test is skipped.
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Protocol package
+        working-directory: packages/dlna_core
+        run: |
+          dart pub get
+          dart analyze --fatal-infos
+          dart test
+      - name: App
+        run: |
+          flutter pub get
+          flutter analyze --fatal-infos
+          flutter test
+      - name: Native unit tests and debug APK
+        run: |
+          flutter build apk --debug
+          cd android && ./gradlew :app:testDebugUnitTest
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dlna-cast-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk

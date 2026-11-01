@@ -1,0 +1,13 @@
+name: dlna_core
+description: >-
+  DLNA/UPnP renderer discovery (SSDP), control (SOAP AVTransport and RenderingControl) and media serving in pure
+  Dart, with no dependencies. A port of the protocol layer of dlna-cast.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.13.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.26.0

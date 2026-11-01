@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Beam mark: a play button broadcasting. 512 units span the 108dp adaptive canvas, which keeps the mark inside
+     the 66dp safe circle (design/brand/beam.svg). Also the splash icon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path
+        android:pathData="M120,176L120,336L248,256Z"
+        android:strokeWidth="36"
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="102" android:startY="158" android:endX="266" android:endY="354"
+                android:startColor="#FFFFC56D" android:endColor="#FFEC8429" />
+        </aapt:attr>
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="102" android:startY="158" android:endX="266" android:endY="354"
+                android:startColor="#FFFFC56D" android:endColor="#FFEC8429" />
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M291.84,212.16A62,62 0,0 1,291.84 299.84"
+        android:strokeWidth="26"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="290" android:startY="150" android:endX="370" android:endY="362"
+                android:startColor="#FFB8ADFF" android:endColor="#FF7D6CF2" />
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M322.95,181.05A106,106 0,0 1,322.95 330.95"
+        android:strokeWidth="26"
+        android:strokeAlpha="0.72"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="290" android:startY="150" android:endX="370" android:endY="362"
+                android:startColor="#FFB8ADFF" android:endColor="#FF7D6CF2" />
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M354.07,149.93A150,150 0,0 1,354.07 362.07"
+        android:strokeWidth="26"
+        android:strokeAlpha="0.45"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="290" android:startY="150" android:endX="370" android:endY="362"
+                android:startColor="#FFB8ADFF" android:endColor="#FF7D6CF2" />
+        </aapt:attr>
+    </path>
+</vector>

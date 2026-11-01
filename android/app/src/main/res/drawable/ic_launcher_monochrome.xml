@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Beam mark in one colour, for Android 13 themed icons; the launcher tints it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path android:pathData="M120,176L120,336L248,256Z" android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FFFFFFFF" android:strokeWidth="36" android:strokeLineJoin="round" />
+    <path android:pathData="M291.84,212.16A62,62 0,0 1,291.84 299.84" android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="26" android:strokeLineCap="round" />
+    <path android:pathData="M322.95,181.05A106,106 0,0 1,322.95 330.95" android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="26" android:strokeAlpha="0.72" android:strokeLineCap="round" />
+    <path android:pathData="M354.07,149.93A150,150 0,0 1,354.07 362.07" android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="26" android:strokeAlpha="0.45" android:strokeLineCap="round" />
+</vector>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The intro animation's first frame starts on this colour with the Beam mark at 288dp, so the hand-off is seamless. -->
+    <color name="splash_background">#FF1B1E22</color>
+</resources>
