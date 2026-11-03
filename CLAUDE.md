@@ -26,7 +26,15 @@ protocol layer this repo ports.
     stream instead: `PhotoSource` draws the bitmap into the screen-share encoder. In the fake renderer: `rejectImages`.
 - Photo streams and HEVC conversion confirmed working on the goggles (2026-11-01).
 - Done (2026-11-01): Beam logo (play button + broadcast arcs), adaptive/monochrome/notification icons, splash,
-  launch animation with synthesised sound, branded home screen. Next: Play Store release.
+  launch animation with synthesised sound, branded home screen.
+- Play release (as of 2026-11-03): the app "dlnacast" exists in Play Console (personal account "ksrk"). The store
+  listing, App content forms (from the launch kit, https://claude.ai/artifact/SUnr6qpr6VKH4Z9LRmah8L), and the
+  foreground-service and photo/video declarations are filled in, with the demo video at
+  https://www.youtube.com/watch?v=aX2HOcaH_gQ. Release 1 (1.0.0) is on the Closed testing (Alpha) track with a
+  12-tester email list. Sending it for review is the user's call. It's a personal account, so production needs
+  12+ testers opted in for 14 days first. The upload key lives at
+  `C:\Users\Karan\keystores\dlna-cast-upload.jks` with its password in the ignored `android/key.properties`.
+  A version bump in `pubspec.yaml` is needed for every new upload.
 - Debug on device with: `adb logcat -s ScreenStreamer LiveServer CastService VideoConverter flutter` plus the in-app
   Activity log (file-cast errors only show there; request lines go to the `flutter` tag).
 - Git: `main` is pushed to https://github.com/karan-ksrk/dlna-cast-android (public; CI in `.github/workflows`).

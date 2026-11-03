@@ -94,6 +94,9 @@ class NativeBridge {
 
   static Future<void> stopLaunchSound() => _channel.invokeMethod('stopLaunchSound');
 
+  /// Opens a web page in the user's browser. False if no app can open it.
+  static Future<bool> openUrl(String url) async => await _channel.invokeMethod<bool>('openUrl', url) ?? false;
+
   static Future<void> stopCast() => _channel.invokeMethod('stopCast');
 
   static Future<({int bytesSent, int clients})> screenStats() async {

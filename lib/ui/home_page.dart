@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:photo_manager/photo_manager.dart';
 
 import '../cast_controller.dart';
+import '../native.dart';
 import 'brand.dart';
 import 'gallery_page.dart';
 import 'now_playing.dart';
@@ -35,6 +36,8 @@ class HomePage extends StatelessWidget {
             _CastSection(controller: controller),
             const SizedBox(height: 24),
             _ActivityLog(entries: controller.log),
+            const SizedBox(height: 12),
+            const _Footer(),
           ],
         ),
       ),
@@ -524,4 +527,29 @@ class _ActivityLog extends StatelessWidget {
       ],
     ),
   );
+}
+
+/// Play requires the privacy policy to be reachable from inside the app, not just from the store listing.
+class _Footer extends StatelessWidget {
+  const _Footer();
+
+  static const _privacy = 'https://github.com/karan-ksrk/dlna-cast-android/blob/main/PRIVACY.md';
+  static const _source = 'https://github.com/karan-ksrk/dlna-cast-android';
+
+  @override
+  Widget build(BuildContext context) {
+    Widget link(String label, String url) => TextButton(
+      style: TextButton.styleFrom(foregroundColor: Palette.inkFaint, textStyle: const TextStyle(fontSize: 12.5)),
+      onPressed: () => NativeBridge.openUrl(url),
+      child: Text(label),
+    );
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        link('Privacy policy', _privacy),
+        const Text('·', style: TextStyle(color: Palette.inkFaint)),
+        link('Source code', _source),
+      ],
+    );
+  }
 }

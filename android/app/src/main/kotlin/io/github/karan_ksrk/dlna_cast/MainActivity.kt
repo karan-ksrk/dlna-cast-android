@@ -8,6 +8,7 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.projection.MediaProjectionManager
 import android.net.wifi.WifiManager
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import io.flutter.embedding.android.FlutterActivity
@@ -87,6 +88,12 @@ class MainActivity : FlutterActivity() {
                         )
                     },
                 )
+                "openUrl" -> {
+                    val opened = runCatching {
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(call.arguments as String)))
+                    }.isSuccess
+                    result.success(opened)
+                }
                 "playLaunchSound" -> result.success(playLaunchSound())
                 "stopLaunchSound" -> {
                     launchSound?.release()
